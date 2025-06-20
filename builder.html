@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Resume Builder</h1>
+    <form id="resume-form">
+      <section>
+        <h2>Personal Info</h2>
+        <div class="form-section">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone" required>
+       <input type="text" id="address" placeholder="ADDRESS" required>
+       </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="form-section">
+        <input type="text" id="degree" placeholder="Degree" required>
+        <input type="text" id="institute" placeholder="Institute" required>
+        <input type="text" id="edu-year" placeholder="Year" required>
+        <input type="text" id="cgpa" placeholder="CGPA">
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="form-section">
+        <input type="text" id="job-title" placeholder="Job Title" required>
+        <input type="text" id="company" placeholder="Company" required>
+        <input type="text" id="exp-duration" placeholder="Duration" required>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="form-section">
+        <input type="text" id="skills" placeholder="e.g. HTML, CSS, JavaScript" required>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div id="projects-container">
+          <div class="project-group">
+            <input type="text" class="project-title" placeholder="Project Title" required>
+            <input type="text" class="project-desc" placeholder="Short Description" required>
+          </div>
+        </div>
+        <button type="button" class="secondary" onclick="addProject()">+ Add Project</button>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <div id="certifications-container">
+          <div class="cert-group">
+            <input type="text" class="cert-name" placeholder="Certification Name" required>
+            <input type="text" class="cert-org" placeholder="Issuing Organization" required>
+          </div>
+        </div>
+        <button type="button" class="secondary" onclick="addCertification()">+ Add Certification</button>
+      </section>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+
+    <div id="resume-preview">
+      <h2 id="p-name">Your Name</h2>
+      <p id="p-email"></p>
+      <p id="p-phone"></p>
+     <p id="p-address"></pid></p>
+      <hr>
+      <h3>Education</h3>
+      <p id="p-edu"></p>
+      <h3>Experience</h3>
+      <p id="p-exp"></p>
+      <h3>Skills</h3>
+      <p id="p-skills"></p>
+      <h3>Projects</h3>
+      <div id="p-projects"></div>
+      <h3>Certifications</h3>
+      <div id="p-certs"></div>
+    </div>
+
+    <button class="download" onclick="downloadPDF()">⬇ Download PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+                                                                             

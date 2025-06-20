@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="homepage">
+
+  <!-- Background Particles -->
+  <div id="particles-js"></div>
+
+  <!-- HERO Section -->
+  <section class="hero-content">
+    <h1>Build Your Resume in Minutes</h1>
+    <p>Create professional resumes with just a few clicks.</p>
+    <a href="#about" class="scroll-down">⬇ Scroll to Learn More</a>
+  </section>
+
+  <!-- ABOUT Section -->
+  <section id="about" class="info-section reveal">
+    <h2>About Resume Builder</h2>
+    <p>
+      This tool helps you create a polished, job-winning resume in minutes — no signup, no confusion, just fill in your details and download your resume!
+    </p>
+  </section>
+
+  <!-- FEATURES Section -->
+  <section id="features" class="info-section features reveal">
+    <h2>How It Helps You</h2>
+    <ul>
+      <li>✅ Easy and fast to use</li>
+      <li>✅ Download PDF instantly</li>
+      <li>✅ No login or account needed</li>
+      <li>✅ Mobile-friendly and installable</li>
+    </ul>
+  </section>
+
+  <!-- START RESUME Section -->
+  <section id="start" class="info-section center reveal">
+    <h2>Ready to get started?</h2>
+    <a href="builder.html" class="cta-button">Start Resume Builder</a>
+  </section>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3, "random": true },
+        "size": { "value": 4, "random": true },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+  <!-- Reveal on Scroll -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.85;
+        if (top < triggerPoint) {
+          section.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
